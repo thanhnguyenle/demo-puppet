@@ -15,3 +15,9 @@ forge 'https://forge.puppet.com'
 #mod 'apache',
 #  git:    'https://github.com/puppetlabs/puppetlabs-apache',
 #  branch: 'docs_experiment'
+# Puppetfile
+mod 'puppetlabs-apache', '7.0.0' # Fixes nixagent1 module dependency
+mod 'puppetlabs-iis', '8.0.3'    # Fixes winagent module dependency
+# Puppetfile
+mod 'puppetlabs-concat', '7.1.1'   # Fixes nixagent1 module dependency
+mod 'puppetlabs-pwshlib', '0.10.0' # Fixes winagent module dependency
