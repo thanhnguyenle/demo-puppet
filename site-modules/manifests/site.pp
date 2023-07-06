@@ -24,8 +24,8 @@ File { backup => false }
 # Puppet Enterprise console and External Node Classifiers (ENC's).
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
+# control-repo/manifests/site.pp
 node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
+  include "role::${trusted['extensions']['pp_role']}"
+  notify { 'It worked! This is experimental code on your feature branch!': }
 }
