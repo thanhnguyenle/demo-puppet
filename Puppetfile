@@ -1,17 +1,16 @@
 forge 'https://forge.puppet.com'
 
-# Modules from the Puppet Forge
-# Versions should be updated to be the latest at the time you start
-#mod 'puppetlabs/inifile', '5.0.1'
-#mod 'puppetlabs/stdlib',  '7.0.1'
-#mod 'puppetlabs/concat',  '7.0.1'
+# Puppetfile
+mod 'apache',
+  :git => 'https://github.com/puppetlabs/puppetlabs-apache',
+  :tag => 'v7.0.0'
+mod 'iis',
+  :git => 'https://github.com/puppetlabs/puppetlabs-iis',
+  :tag => 'v8.0.3'
+mod 'concat',
+  :git => 'https://github.com/puppetlabs/puppetlabs-concat',
+  :tag => 'v7.1.1'
+mod 'pwshlib',
+  :git => 'https://github.com/puppetlabs/ruby-pwsh',
+  :tag => '0.10.0'
 
-# Modules from Git
-# Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
-#mod 'apache',
-#  git:    'https://github.com/puppetlabs/puppetlabs-apache',
-#  commit: '1b6f89afdde0df7f9433a163d5c4b5328eac5779'
-
-#mod 'apache',
-#  git:    'https://github.com/puppetlabs/puppetlabs-apache',
-#  branch: 'docs_experiment'
