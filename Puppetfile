@@ -13,9 +13,9 @@ mod 'concat',
 mod 'pwshlib',
   :git => 'https://github.com/puppetlabs/ruby-pwsh',
   :tag => '0.10.0'
-mod 'pe_code_manager_webhook',
-  :git => 'https://github.com/npwalker/pe_code_manager_webhook',
-  :tag => '1.0.5'
+# mod 'pe_code_manager_webhook',
+#   :git => 'https://github.com/npwalker/pe_code_manager_webhook',
+#   :tag => '1.0.5'
 mod 'postgresql',
   :git => 'https://github.com/puppetlabs/puppetlabs-postgresql',
   :tag => 'v9.1.0'
