@@ -33,5 +33,9 @@ File { backup => false }
 #     password => postgresql::postgresql_password('admin', 'admin'),
 #   }
 # }
+class { 'postgresql::globals':
+  manage_package_repo => true,
+  version             => '9.1',
+}
 class { 'postgresql::server':
 }

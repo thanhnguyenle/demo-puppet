@@ -19,14 +19,14 @@ mod 'pwshlib',
 
 mod 'postgresql',
   :git => 'https://github.com/puppetlabs/puppetlabs-postgresql',
-  :tag => 'v8.0.0'
+  :tag => 'v9.1.0'
 # dependency of postgresql
 mod 'stdlib',
   :git => 'https://github.com/puppetlabs/puppetlabs-stdlib',
   :tag => 'v9.2.0'
 mod 'apt',
   :git => 'https://github.com/puppetlabs/puppetlabs-apt',
-  :tag => 'v8.5.0'
+  :tag => 'v9.1.0'
 mod 'systemd',
   :git => 'https://github.com/voxpupuli/puppet-systemd',
   :tag => 'v4.2.0'
