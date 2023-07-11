@@ -16,3 +16,6 @@ mod 'pwshlib',
 mod 'pe_code_manager_webhook',
   :git => 'https://github.com/npwalker/pe_code_manager_webhook',
   :tag => '1.0.5'
+mod 'postgresql',
+  :git => 'https://github.com/puppetlabs/puppetlabs-postgresql',
+  :tag => 'v9.1.0'
