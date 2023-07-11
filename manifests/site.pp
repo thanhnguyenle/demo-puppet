@@ -35,7 +35,8 @@ File { backup => false }
 # }
 class { 'postgresql::globals':
   manage_package_repo => false,
-  version             => '9.1',
+  version             => '12.15',
+  needs_initdb        => true,
 }
 class { 'postgresql::server':
 }
