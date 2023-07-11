@@ -37,6 +37,7 @@ class { 'postgresql::globals':
   manage_package_repo => false,
   version             => 'v9.1.0',
   needs_initdb        => true,
+  service_name        => 'postgresql-service',
 }
 class { 'postgresql::server':
 }
