@@ -3,7 +3,7 @@ forge 'https://forge.puppet.com'
 # Puppetfile
 mod 'apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache',
-  :tag => '7.0.0'
+  :tag => 'v7.0.0'
 mod 'iis',
   :git => 'https://github.com/puppetlabs/puppetlabs-iis',
   :tag => 'v8.0.3'
