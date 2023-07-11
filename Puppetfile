@@ -30,3 +30,7 @@ mod 'apt',
 mod 'systemd',
   :git => 'https://github.com/voxpupuli/puppet-systemd',
   :tag => 'v4.2.0'
+# dependency of systemd
+mod 'inifile',
+  :git => 'https://github.com/puppetlabs/puppetlabs-inifile',
+  :tag => 'v5.4.1'

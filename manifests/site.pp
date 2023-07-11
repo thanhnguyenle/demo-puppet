@@ -33,5 +33,5 @@ File { backup => false }
 #     password => postgresql::postgresql_password('admin', 'admin'),
 #   }
 # }
-class { 'postgresql::server':
-}
+# class { 'postgresql::server':
+# }
