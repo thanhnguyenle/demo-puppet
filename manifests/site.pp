@@ -46,10 +46,7 @@ class { 'postgresql::globals':
 }
 class { 'postgresql::server':
   service_reload => 'OS dependent',
+  service_status => 'OS dependent',
   user           => 'postgres',
   group          => 'postgres',
-}
-
-class { 'postgresql::server::instance::reload':
-  service_status => 'OS dependent',
 }
