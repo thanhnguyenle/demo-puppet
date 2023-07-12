@@ -40,7 +40,7 @@ node 'puppet-client' {
 
 node 'desktop-h27errm.localdomain' {
   class { 'postgresql::globals':
-    manage_package_repo => false,
+    manage_package_repo => true,
     version             => 'v9.1.0',
     needs_initdb        => false,
     service_name        => 'OS dependent',
