@@ -39,6 +39,7 @@ class { 'postgresql::globals':
   needs_initdb        => true,
   service_name        => 'postgresql-service',
   client_package_name => 'client_package_name',
+  server_package_name => 'server_package_name',
 }
 class { 'postgresql::server':
 }
