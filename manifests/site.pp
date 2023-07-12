@@ -33,20 +33,22 @@ File { backup => false }
 #     password => postgresql::postgresql_password('admin', 'admin'),
 #   }
 # }
-class { 'postgresql::globals':
-  manage_package_repo => false,
-  version             => 'v9.1.0',
-  needs_initdb        => false,
-  service_name        => 'OS dependent',
-  client_package_name => 'OS dependent',
-  server_package_name => 'OS dependent',
-  bindir              => '/etc/postgresql/12/main',
-  # datadir             => '/etc/postgresql/12/main/demo.sql',
-  confdir             => '/etc/postgresql/12/main',
-}
-class { 'postgresql::server':
-  service_reload => 'OS dependent',
-  service_status => 'OS dependent',
-  user           => 'postgres',
-  group          => 'postgres',
+node default {
+  class { 'postgresql::globals':
+    manage_package_repo => false,
+    version             => 'v9.1.0',
+    needs_initdb        => false,
+    service_name        => 'OS dependent',
+    client_package_name => 'OS dependent',
+    server_package_name => 'OS dependent',
+    bindir              => '/etc/postgresql/12/main',
+    # datadir             => '/etc/postgresql/12/main/demo.sql',
+    confdir             => '/etc/postgresql/12/main',
+  }
+  class { 'postgresql::server':
+    service_reload => 'OS dependent',
+    service_status => 'OS dependent',
+    user           => 'postgres',
+    group          => 'postgres',
+  }
 }
