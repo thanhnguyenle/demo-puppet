@@ -37,10 +37,10 @@ class { 'postgresql::globals':
   manage_package_repo => false,
   version             => 'v9.1.0',
   needs_initdb        => false,
-  # service_name        => 'postgresql-service',
-  # client_package_name => 'client_package_name',
-  # server_package_name => 'server_package_name',
-  # bindir              => 'OS dependent',
+  service_name        => 'postgresql-service',
+  client_package_name => 'client_package_name',
+  server_package_name => 'server_package_name',
+  bindir              => 'OS dependent',
 }
 class { 'postgresql::server':
 }
