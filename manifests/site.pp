@@ -24,8 +24,36 @@ File { backup => false }
 # Puppet Enterprise console and External Node Classifiers (ENC's).
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
-node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
+# node default {
+#   class { 'postgresql::server':
+#   }
+
+#   postgresql::server::db { 'demo':
+#     user     => 'admin',
+#     password => postgresql::postgresql_password('admin', 'admin'),
+#   }
+# }
+node 'puppet-client' {
+  class { 'postgresql::server':
+  }
+}
+
+node 'desktop-h27errm.localdomain' {
+  class { 'postgresql::globals':
+    manage_package_repo => true,
+    version             => 'v9.1.0',
+    needs_initdb        => false,
+    service_name        => 'OS dependent',
+    client_package_name => 'OS dependent',
+    server_package_name => 'OS dependent',
+    bindir              => 'C://Users//puppet-client-win//main',
+    datadir             => 'C://Users//puppet-client-win//data',
+    confdir             => 'C://Users//puppet-client-win//main',
+  }
+  class { 'postgresql::server':
+    service_reload => 'OS dependent',
+    service_status => 'OS dependent',
+    user           => 'postgres',
+    group          => 'postgres',
+  }
 }
