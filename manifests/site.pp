@@ -41,7 +41,7 @@ class { 'postgresql::globals':
   client_package_name => 'OS dependent',
   server_package_name => 'OS dependent',
   bindir              => 'OS dependent',
-  datadir             => 'OS dependent',
+  datadir             => '/etc/postgresql/12/data',
   confdir             => '/etc/postgresql/12/main',
 }
 class { 'postgresql::server':
