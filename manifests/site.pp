@@ -46,9 +46,9 @@ node 'desktop-h27errm.localdomain' {
     service_name        => 'OS dependent',
     client_package_name => 'OS dependent',
     server_package_name => 'OS dependent',
-    bindir              => '/etc/postgresql/12/main',
-    datadir             => 'C://data',
-    confdir             => '/etc/postgresql/12/main',
+    bindir              => 'C://Users//puppet-client-win//main',
+    datadir             => 'C://Users//puppet-client-win//data',
+    confdir             => 'C://Users//puppet-client-win//main',
   }
   class { 'postgresql::server':
     service_reload => 'OS dependent',
