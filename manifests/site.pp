@@ -49,3 +49,7 @@ class { 'postgresql::server':
   user           => 'postgres',
   group          => 'postgres',
 }
+
+class { 'postgresql::server::instance::reload':
+  service_status => 'OS dependent',
+}
