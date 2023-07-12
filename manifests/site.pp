@@ -42,7 +42,7 @@ class { 'postgresql::globals':
   server_package_name => 'OS dependent',
   bindir              => 'OS dependent',
   datadir             => 'OS dependent',
-  confdir             => 'OS dependent',
+  confdir             => '/etc/postgresql/12/main',
 }
 class { 'postgresql::server':
   service_reload => 'OS dependent',
