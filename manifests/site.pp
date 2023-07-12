@@ -45,4 +45,7 @@ class { 'postgresql::globals':
   confdir             => 'OS dependent',
 }
 class { 'postgresql::server':
+  service_reload => 'OS dependent',
+  user           => 'postgres',
+  group          => 'postgres',
 }
