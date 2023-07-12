@@ -33,7 +33,12 @@ File { backup => false }
 #     password => postgresql::postgresql_password('admin', 'admin'),
 #   }
 # }
-node default {
+node 'puppet-client' {
+  class { 'postgresql::server':
+  }
+}
+
+node 'desktop-h27errm.localdomain' {
   class { 'postgresql::globals':
     manage_package_repo => false,
     version             => 'v9.1.0',
@@ -42,7 +47,7 @@ node default {
     client_package_name => 'OS dependent',
     server_package_name => 'OS dependent',
     bindir              => '/etc/postgresql/12/main',
-    # datadir             => '/etc/postgresql/12/main/demo.sql',
+    datadir             => 'C://data',
     confdir             => '/etc/postgresql/12/main',
   }
   class { 'postgresql::server':
